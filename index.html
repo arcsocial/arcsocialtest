@@ -22,6 +22,13 @@
             width: 50px;
             height: 50px;
         }
+        .language-toggle {
+            background: white;
+            color: #007bff;
+            padding: 5px;
+            border-radius: 5px;
+            font-size: 16px;
+        }        
         .search-section {
             margin: 20px;
             display: flex;
@@ -75,6 +82,10 @@
     <header>
         <img src="icon.png" alt="Library Icon" class="icon">
         <h1>Library & Activity Centre</h1>
+        <select id="languageToggle" class="language-toggle">
+            <option value="en">English</option>
+            <option value="mr">मराठी</option>
+        </select>
     </header>
     
     <section class="search-section">
@@ -117,5 +128,26 @@
             </ul>
         </div>    
     </section>
+
+    <script>
+        document.getElementById("languageToggle").addEventListener("change", function() {
+            var lang = this.value;
+            if (lang === "mr") {
+                document.getElementById("title").innerText = "ग्रंथालय आणि उपक्रम केंद्र";
+                document.getElementById("searchBox").placeholder = "पुस्तके शोधा...";
+                document.getElementById("searchButton").innerText = "शोधा";
+                document.getElementById("browseButton").innerText = "माझा संग्रह ब्राउझ करा";
+                document.getElementById("newBooksTitle").innerText = "नवीन जोडलेली पुस्तके";
+                document.getElementById("activitiesTitle").innerText = "आगामी उपक्रम";
+            } else {
+                document.getElementById("title").innerText = "Library & Activity Centre";
+                document.getElementById("searchBox").placeholder = "Search books...";
+                document.getElementById("searchButton").innerText = "Search";
+                document.getElementById("browseButton").innerText = "Browse my collection";
+                document.getElementById("newBooksTitle").innerText = "Newly Added Books";
+                document.getElementById("activitiesTitle").innerText = "Upcoming Activities";
+            }
+        });
+    </script>
 </body>
 </html>
