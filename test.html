@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Book Collection</title>
+    <style>
+        body { font-family: Arial, sans-serif; text-align: center; }
+        select, button { padding: 10px; margin: 10px; }
+        table { width: 80%; margin: auto; border-collapse: collapse; }
+        th, td { padding: 8px; border: 1px solid black; }
+    </style>
+</head>
+<body>
+
+    <h1>My Book Collection</h1>
+
+    <label for="genreSelect">Filter by Genre:</label>
+    <select id="genreSelect" onchange="filterByGenre()">
+        <option value="All">All</option>
+        <option value="Fiction">Fiction</option>
+        <option value="Mystery">Mystery</option>
+        <option value="Non-Fiction">Non-Fiction</option>
+        <option value="Science Fiction">Science Fiction</option>
+    </select>
+
+    <div id="bookTable">Loading books...</div>
+
+    <script src="script.js"></script> <!-- Link to JavaScript file -->
+</body>
+</html>
