@@ -2,7 +2,7 @@ let bookData = []; // Global array to store book data
 
 // Fetch book data from Google Apps Script Web App
 //fetch("https://script.google.com/macros/s/AKfycbxd0O9uboKnv2DDuJpE7AnG82iZTS8hIA9OaFi_BIHQd4Kpx2JYrpx0VEh-MiKxyfwcXA/exec")
-fetch("https://script.google.com/macros/s/AKfycbzzLgt5dOjY_Et5xoLxuGAeImgvnxlu5BvP9ElSxPLc/dev")
+fetch("https://script.google.com/macros/s/AKfycbwOHyW1KJnfaq0wmohWbS7xzpE5sYJYNxPGYZB1zxed7-VkLu7pSHEaX4N5bt-j0cHNeg/exec")
     .then(response => response.json())
     .then(data => {
         bookData = data; // Store the fetched data
